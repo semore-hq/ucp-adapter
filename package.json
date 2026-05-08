@@ -1,0 +1,57 @@
+{
+  "name": "@semore/ucp-adapter",
+  "version": "0.1.0",
+  "description": "UCP (Universal Commerce Protocol) adapter — capability advertisement + query dispatch helpers for agentic commerce discovery.",
+  "license": "Apache-2.0",
+  "author": "Semore Founding Team <semore.hq@gmail.com>",
+  "homepage": "https://semore.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semore-hq/ucp-adapter.git"
+  },
+  "bugs": {
+    "url": "mailto:semore.hq@gmail.com"
+  },
+  "keywords": [
+    "ucp",
+    "universal-commerce-protocol",
+    "agentic-commerce",
+    "capability",
+    "semore",
+    "ai-agents"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm typecheck && pnpm test && bash ./scripts/opsec-scan.sh \"$PWD\" && pnpm build"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

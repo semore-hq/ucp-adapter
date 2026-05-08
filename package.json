@@ -1,6 +1,6 @@
 {
   "name": "@semore/ucp-adapter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "UCP (Universal Commerce Protocol) adapter — capability advertisement + query dispatch helpers for agentic commerce discovery.",
   "license": "Apache-2.0",
   "author": "Semore Founding Team <semore.hq@gmail.com>",
